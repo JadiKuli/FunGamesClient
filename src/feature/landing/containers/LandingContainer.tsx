@@ -8,8 +8,8 @@ export default function LandingContainer() {
     <main className="min-h-screen bg-black text-white">
       <HeroSection />
       <AboutSection />
-      <ShowcaseSection />
       <LeaderboardSection />
+      <ShowcaseSection />
     </main>
   );
 }
