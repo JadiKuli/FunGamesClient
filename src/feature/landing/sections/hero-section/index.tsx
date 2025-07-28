@@ -1,7 +1,6 @@
 "use client";
-import { AnimatePresence, motion } from "motion/react";
 import VideoPlayer, { VideoPlayerHandle } from "./components/VideoPlayer";
-import { useEffect, useRef, useState } from "react";
+import { useRef, useState } from "react";
 import Image from "next/image";
 import { FaPause, FaPlay } from "react-icons/fa";
 
@@ -10,9 +9,11 @@ export default function HeroSection() {
   const [isPlaying, setIsPlaying] = useState(false);
 
   const handleToggle = () => {
-    videoRef.current?.getStatus()
-      ? videoRef.current?.pause()
-      : videoRef.current?.play();
+    if (videoRef.current?.getStatus()) {
+      videoRef.current.pause();
+    } else {
+      videoRef.current?.play();
+    }
     setIsPlaying(true);
   };
 

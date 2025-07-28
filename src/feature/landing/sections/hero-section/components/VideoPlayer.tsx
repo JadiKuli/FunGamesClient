@@ -44,7 +44,7 @@ const VideoPlayer = forwardRef<VideoPlayerHandle, VideoPlayerProps>(
       if (!isPlaying && onStatusChange) {
         onStatusChange(false);
       }
-    }, [isPlaying]);
+    }, [isPlaying, onStatusChange]);
 
     return (
       <div className="min-h-screen flex flex-col items-center justify-center">

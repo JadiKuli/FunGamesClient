@@ -2,8 +2,6 @@
 import { useScroll, useTransform, motion } from "motion/react";
 import { useRef } from "react";
 import ScreenMarquee from "@/shared/components/ScreenMarquee";
-import Image from "next/image";
-import { MdFileDownload } from "react-icons/md";
 import AvailableApp from "./components/Available";
 
 export default function ShowcaseSection() {

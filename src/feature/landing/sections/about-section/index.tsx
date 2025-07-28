@@ -1,9 +1,7 @@
 "use client";
 
-import ScreenMarquee from "@/shared/components/ScreenMarquee";
 import { motion, useScroll, useTransform } from "motion/react";
-import { useEffect, useRef } from "react";
-import AboutBackground from "./components/Background";
+import { useRef } from "react";
 
 export default function AboutSection() {
   const targetRef = useRef(null);
@@ -85,8 +83,8 @@ export default function AboutSection() {
                 Soccer Fun is a thrilling and action-packed mobile soccer game
                 that brings you an exciting, fast-paced, and unique twist on the
                 classic soccer experience! With easy controls and vibrant, fun
-                characters, you'll find yourself hooked for hours. Whether
-                you're a casual gamer or a competitive player, Soccer Fun is
+                characters, you&apos;ll find yourself hooked for hours. Whether
+                you&apos;re a casual gamer or a competitive player, Soccer Fun is
                 perfect for all types of soccer fans. In this game, players take
                 on the role of quirky pill-shaped characters who compete in
                 high-energy soccer matches. Test your skills in online mode and
