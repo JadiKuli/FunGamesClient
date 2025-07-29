@@ -33,7 +33,7 @@ export default function Leaderboard({
       <div className="w-30 h-full bg-white skew-x-12 rounded-lg flex items-center justify-center text-black font-semibold text-2xl">
         <div className="skew-x-[-12deg] flex items-end">
           <h2 style={{ color }}>{score}</h2>
-          <p className="text-sm font-normal">pts</p>
+          <p className="text-xs font-normal">$soccer</p>
         </div>
       </div>
     </div>

@@ -3,6 +3,7 @@ import VideoPlayer, { VideoPlayerHandle } from "./components/VideoPlayer";
 import { useRef, useState } from "react";
 import Image from "next/image";
 import { FaPause, FaPlay } from "react-icons/fa";
+import { useRouter } from "next/navigation";
 
 export default function HeroSection() {
   const videoRef = useRef<VideoPlayerHandle>(null);
@@ -16,6 +17,8 @@ export default function HeroSection() {
     }
     setIsPlaying(true);
   };
+
+  const router = useRouter();
 
   return (
     <div className="h-[100vh] w-full flex relative bg-black">
@@ -34,22 +37,30 @@ export default function HeroSection() {
             </p>
           </div>
         </div>
-        <button
-          className="border px-7 py-3 rounded-full flex gap-3 hover:bg-white hover:cursor-pointer hover:text-black transition duration-300 items-center"
-          onClick={handleToggle}
-        >
-          {isPlaying ? (
-            <>
-              <FaPause />
-              <p>Pause Video</p>
-            </>
-          ) : (
-            <>
-              <FaPlay />
-              <p>Play Demo</p>
-            </>
-          )}
-        </button>
+        <div className="flex gap-5">
+          <button
+            className="border px-7 py-3 rounded-full flex gap-3 hover:bg-white hover:cursor-pointer hover:text-black transition duration-300 items-center"
+            onClick={handleToggle}
+          >
+            {isPlaying ? (
+              <>
+                <FaPause />
+                <p>Pause Video</p>
+              </>
+            ) : (
+              <>
+                <FaPlay />
+                <p>Play Demo</p>
+              </>
+            )}
+          </button>
+          <button
+            className="border px-7 py-3 rounded-full flex gap-3 hover:bg-white hover:cursor-pointer hover:text-black transition duration-300 items-center"
+            onClick={() => router.push("/auth")}
+          >
+            <p>Login Area</p>
+          </button>
+        </div>
       </div>
       <VideoPlayer
         ref={videoRef}
